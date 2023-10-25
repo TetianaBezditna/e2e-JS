@@ -50,7 +50,7 @@ public class TestLogin {
         driver.findElement(By.xpath(buttonLogin)).click();
 
         // check the title on the page
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.titleIs(title));
         driver.getTitle();
         assertEquals(title,    driver.getTitle(), "title = " +   driver.getTitle());
