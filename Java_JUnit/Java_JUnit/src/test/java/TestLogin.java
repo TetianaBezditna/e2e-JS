@@ -15,13 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TestLogin {
     private static WebDriver driver;
-    private String userName = "Admin";
-    private String password = "admin123";
-    private String userNameField = "//input[@name='username']";
-    private String passwordField = "//input[@name='password']";
-    private String buttonLogin = "//button[text()=' Login ']";
-    private String title = "OrangeHRM";
-    private String URL = "https://opensource-demo.orangehrmlive.com/web/index.php";
+
 
     @BeforeAll
     public static void initWebDriver(){
@@ -38,25 +32,25 @@ public class TestLogin {
     @Test
     public void checkLoginInSite (){
         //open the login form
-        driver.get(URL + "/auth/login");
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
         // input user name
-        driver.findElement(By.xpath(userNameField)).sendKeys(userName);
+        driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
 
         // input the password
-        driver.findElement(By.xpath(passwordField)).sendKeys(password);
+        driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
 
         // Click on the button 'Login'
-        driver.findElement(By.xpath(buttonLogin)).click();
+        driver.findElement(By.xpath("//button[text()=' Login ']")).click();
 
         // check the title on the page
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.titleIs(title));
+        wait.until(ExpectedConditions.titleIs("OrangeHRM"));
         driver.getTitle();
-        assertEquals(title,    driver.getTitle(), "title = " +   driver.getTitle());
+        assertEquals("OrangeHRM",    driver.getTitle(), "title = " +   driver.getTitle());
 
         //checked URL
-        assertEquals(URL + "/dashboard/index",  driver.getCurrentUrl());
+        assertEquals("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index",  driver.getCurrentUrl());
 
     }
 
