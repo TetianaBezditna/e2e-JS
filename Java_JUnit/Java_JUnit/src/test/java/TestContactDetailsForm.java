@@ -83,7 +83,7 @@ public class TestContactDetailsForm {
         final String myInfoCategory = "//ul[@class='oxd-main-menu']//span[text()='My Info']";
         final String contactDetails = "//div[@class='orangehrm-edit-employee-navigation']//a[text()='Contact Details']";
         final String selectedCountry = "//div[@class='oxd-form-row']//div[@class='oxd-select-text-input']";
-        final String expandListCountry = "//*[starts-with(@class, 'oxd-grid-item')]//i";
+        final String expandListCountry = "//div[starts-with(@class, 'oxd-grid-item')]//i";
         final String toastText = "//p[text()='Successfully Updated']";
         final String saveButton = "//button[text()=' Save ']";
         final String pathForItemInList = "//div[@role='listbox']//span[text()=";
