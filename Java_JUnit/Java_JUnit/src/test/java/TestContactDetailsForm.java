@@ -101,7 +101,6 @@ public class TestContactDetailsForm {
         int minimum = 0;
         int randomNum = rn.nextInt(maximum - minimum + 1) + minimum;
 
-
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

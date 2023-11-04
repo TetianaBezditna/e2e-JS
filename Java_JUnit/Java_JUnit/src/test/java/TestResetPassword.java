@@ -51,7 +51,6 @@ public class TestResetPassword {
         driver.quit();
     }
 
-
     @Test
     public void testForgotPasswordForm (){
         final String titleForm = "//form[@class='oxd-form']/h6";
