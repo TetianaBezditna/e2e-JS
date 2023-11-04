@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.*;
-
-
 public class TestResetPassword {
     private static WebDriver driver;
 
@@ -136,5 +134,4 @@ public class TestResetPassword {
         //check the validation message
         assertEquals("Required" , driver.findElement(By.xpath(validationMessage)).getText());
     }
-
 }

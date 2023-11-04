@@ -8,14 +8,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-
 public class TestContactDetailsForm {
     private static WebDriver driver;
 
@@ -33,6 +32,7 @@ public class TestContactDetailsForm {
 
     /**
      * the path to an element on the page
+     *
      * @param value text value
      * @return String
      */
@@ -43,9 +43,10 @@ public class TestContactDetailsForm {
 
     /**
      * Get random element from list
-     * @param list   list with items
-     * @return random item
+     *
+     * @param list list with items
      * @param <T>
+     * @return random item
      */
     public static <T> T getRandomElement(List<T> list) {
         Random random = new Random();
@@ -55,6 +56,7 @@ public class TestContactDetailsForm {
 
     /**
      * Get list value
+     *
      * @return List <String>
      */
     public static List<String> getListValue() {
@@ -196,4 +198,3 @@ public class TestContactDetailsForm {
 
     }
 }
-
